@@ -9,7 +9,7 @@ import (
 	"yizuo/utils"
 )
 
-// Read user data from a CSV file
+// 从CSV表读用户数据
 func ReadUsersDataToCsv()  {
 	file, _ := os.Open(UserDataFile)
 	reader := csv.NewReader(file)
@@ -47,7 +47,7 @@ func ReadUsersDataToCsv()  {
 	}
 }
 
-// User data is written to a CSV file
+// 写入用户数据到CSV表
 func WritesUsersDataToCsv()  {
 	//User status
 	userStatus,err := os.Create(UserDataFile)

@@ -22,13 +22,13 @@ func Register(op string, callback func()) {
 
 // 运行程序
 func Run() {
-	// 帮助信息
-	utils.View()
 	// 用户登录系统，如果登录失败则打印错误信息并推出。
 	if !controllers.UserLoginAuth() {
 		fmt.Println("密码错误次数超过三次，已退出。Bay~，")
 		return
 	}
+	// 帮助信息
+	utils.View()
 	// 主逻辑
 	for {
 		text := utils.Input("请输入指令: ")
